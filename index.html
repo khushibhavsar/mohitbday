@@ -488,6 +488,13 @@ nav {
   padding: 0 16px;
 }
 
+   .gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* THIS makes images crop nicely */
+  display: block;
+}
+
 /* Modal */
 #modal {
   display: none;
@@ -997,7 +1004,7 @@ nav {
 
 <!-- EASTER EGG -->
 <div id="easter-egg">
-  <div>🔐 KONAMI CODE UNLOCKED</div>
+  <div>🔐 CODE UNLOCKED</div>
   <div style="margin-top:8px;color:var(--text-muted);">Mohit once debugged code in his sleep. The bugs were afraid of him.</div>
 </div>
 
@@ -1006,7 +1013,7 @@ nav {
 
 <!-- MODAL -->
 <div id="modal">
-  <div id="modal-img-wrap"><div id="modal-img"></div></div>
+  <div id="modal-img-wrap"><img id="modal-img" style="max-width:100%; max-height:100%; object-fit:contain;"></div>
   <div id="modal-caption"></div>
   <button id="modal-close" onclick="closeModal()">[ Close ]</button>
 </div>
@@ -1035,7 +1042,7 @@ nav {
   </h1>
   <!-- EDIT: Change this subtitle text -->
   <p class="hero-sub">
-    I hope all of your wishes come true, happy <span>22!</span> 💻 ❤️
+    I hope all of your wishes come true, happy <span>22!</span> 
   </p>
   <div class="hero-emojis">
     <span class="hero-emoji" onclick="emojiClick(this)">⚽</span>
@@ -1071,19 +1078,52 @@ nav {
     <div class="letter-title">Dear Mohit,</div>
 
     <!-- EDIT: Customize each line of the letter below -->
-    <p class="letter-line">Happy birthday to the person who somehow convinced me that <em>McLaren</em> is the best F1 team — I'm still not entirely sure how you did that, but here we are.</p>
-    <p class="letter-line">You turned <em>22</em> today, which means you're officially closer to 30 than to 18. Let that sink in. <span class="joke">// runtime: getting_old.exe</span></p>
-    <p class="letter-line">I want you to know that growing up with you as my big brother has been one of the greatest privileges of my life — even when you were absolutely <em>impossible to deal with.</em></p>
-    <p class="letter-line">You taught me that being curious is a superpower. Watching you break apart problems — whether it's robotics, code, or figuring out why the cricket team is losing — made me want to think deeper too.</p>
-    <p class="letter-line">Remember <em>[INSERT INSIDE JOKE #1 — e.g., "that time we stayed up till 3am watching race replays?"]</em> I still laugh about that. Probably always will.</p>
-    <p class="letter-line">And <em>[INSERT INSIDE JOKE #2 — e.g., "your legendary commentary during cricket matches"]</em> — you should honestly have a podcast at this point.</p>
-    <p class="letter-line">You've always supported me in ways you probably don't even realize. The quiet encouragements. The "you've got this" when I didn't believe it. That stuff matters more than you know.</p>
-    <p class="letter-line">I'm so proud of the person you've become — the <em>engineer, the thinker, the teammate, the dreamer.</em> The world doesn't quite know what's coming for it yet.</p>
-    <p class="letter-line">So here's to 22. May your code compile on the first try, may McLaren win the championship, may your cricket team never lose a close match, and may you always find someone as amazing as me to be your sibling. 😉</p>
-    <p class="letter-line">I love you, bhai. More than I usually let on. <em>Don't let it go to your head.</em></p>
+    <p class="letter-line">
+Happy Birthday to my dearest and loving brother ♥️ I truly have never been able to say how indebted I am to you for everything you have done for me. Thank you so much for being there for me when I felt all alone and had no support to lean on.
+</p>
+
+<p class="letter-line">
+I am so sorry for always being so stubborn and not listening to you sometimes. Just know that I am so so grateful for you in my life and would have not wanted any other way.
+</p>
+
+<p class="letter-line">
+You are not only my brother but my best friend, my parent, and of course my very very very annoying sibling.
+</p>
+
+<p class="letter-line">
+Bhai you have spent 4 years of your life without me but I only know life with you in it. Thank you so much for taking such good care of me and giving me so much love.
+</p>
+
+<p class="letter-line">
+I am so thankful to God for giving me such a beautiful brother who takes care of my every need, want, desire, and wish.
+</p>
+
+<p class="letter-line">
+Bhai I hope our bond only grows stronger and that every moment in your life is spent with only joys. May God bless you with everything you desire and keep your heart full of the goodness our parents have instilled in you.
+</p>
+
+<p class="letter-line">
+Just know that I WILL ALWAYS BE BY YOUR SIDE and will ALWAYS try to support every decision you make.
+</p>
+
+<p class="letter-line">
+I will try my best to do anything I can for you and will always root for your success.
+</p>
+
+<p class="letter-line">
+I love you so much and all I pray is for your wellness and prosperity.
+</p>
+
+<p class="letter-line">
+On your special day may you continue to live life with that big smile of yours and continue to make yourself the best version.
+</p>
+
+<p class="letter-line">
+Happy birthday big bro!! 🥰
+</p>
 
     <div class="letter-sign">
-      With all the sibling chaos and love,<br>
+      With all love,<br>
       <strong>
         <!-- EDIT: Your name here -->
         Your favorite (and only) sibling 💛
@@ -1106,9 +1146,8 @@ nav {
     <div id="surprise-reveal">
       <h3>🎉 REVELATION COMPLETE 🎉</h3>
       <!-- EDIT: Customize the surprise message -->
-      <p>You're officially getting old! But lucky for you, you're aging like a fine McLaren upgrade — getting faster, smarter, and more orange with every year. 🏎️🎂</p>
+      <p>You’re officially getting old! But lucky for you, you’re aging like a kesar mango; getting sweeter, richer, and more orange every year 🧡</p>
       <br>
-      <p style="color:var(--orange);font-family:'Space Mono',monospace;font-size:0.85rem;">// Also... check under the chair cushion. Just kidding. Or am I? 🤫</p>
     </div>
   </div>
 </section>
@@ -1116,163 +1155,57 @@ nav {
 <!-- ===================================
      GALLERY SECTION
 =================================== -->
-<section id="gallery">
-  <div class="section-header">
-    <div class="section-label">// MEMORY_ARCHIVE</div>
-    <h2 class="section-title">The <span class="accent">Memories</span><br>We've Made</h2>
-    <div class="section-line"></div>
-  </div>
+<div class="gallery-grid" id="gallery-grid">
 
-  <!-- MEMORY TIMELINE -->
-  <div class="timeline">
-    <!-- EDIT: Add/remove timeline items. Replace text with real memories. -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">YEAR ONE // THE BEGINNING</div>
-      <div class="timeline-content"><strong>[Your earliest memory with Mohit]</strong> — e.g., "You used to let me sit next to you while you played video games, even though I was terrible at it."</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">CHILDHOOD // THE CHAOS ERA</div>
-      <div class="timeline-content"><strong>[A funny childhood memory]</strong> — e.g., "That one road trip where we played cricket with a rolled-up sock in the back seat."</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">TEENAGE // THE ENGINEERING AWAKENING</div>
-      <div class="timeline-content"><strong>[When you first saw him get serious about robotics/engineering]</strong> — e.g., "I watched you stay up all night for your first robotics competition. I knew then you were going to do something big."</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">RECENTLY // THE LEGEND ERA</div>
-      <div class="timeline-content"><strong>[A recent memory or proud moment]</strong> — e.g., "Watching you present your project and thinking 'that's my brother.'"</div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-year">TODAY // HAPPY 22ND ⚡</div>
-      <div class="timeline-content"><strong>This moment.</strong> You, 22, with your whole ridiculous brilliant future ahead of you. I can't wait to see what you build. 🤖</div>
+  <div class="gallery-item" onclick="openModal('images/photo1.jpg','India Wedding Memories')" data-index="0">
+    <img src="photo1.jpg" alt="India days" class="gallery-img">
+    <div class="gallery-hover-label">
+      <span>▶ View Memory</span>
+      <div class="gallery-hover-caption">India days</div>
     </div>
   </div>
 
-  <!-- PHOTO GRID -->
-  <div style="margin-top:60px;">
-    <div class="section-label">// PHOTO_REEL — CLICK TO EXPAND</div>
-  </div>
-  <div class="gallery-grid" id="gallery-grid">
-    <!-- EDIT: Replace emoji and captions with real photos. 
-         For real photos, replace the emoji div with: <img src="path/to/photo.jpg" style="width:100%;height:100%;object-fit:cover;" alt="caption">
-         The data-caption and data-emoji attributes control the modal popup. -->
-    <div class="gallery-item" onclick="openModal('⚽','[PHOTO CAPTION] — e.g., The day you scored that legendary goal')" data-index="0">
-      <div class="gallery-placeholder">⚽<div class="gallery-caption-hint">// PHOTO SLOT 1</div></div>
-      <div class="gallery-hover-label"><span>▶ View Memory</span><div class="gallery-hover-caption">Soccer days</div></div>
-    </div>
-    <div class="gallery-item" onclick="openModal('🏎️','[PHOTO CAPTION] — e.g., Our McLaren superfan era begins')" data-index="1">
-      <div class="gallery-placeholder">🏎️<div class="gallery-caption-hint">// PHOTO SLOT 2</div></div>
-      <div class="gallery-hover-label"><span>▶ View Memory</span><div class="gallery-hover-caption">F1 moments</div></div>
-    </div>
-    <div class="gallery-item" onclick="openModal('🏏','[PHOTO CAPTION] — e.g., Cricket match day vibes')" data-index="2">
-      <div class="gallery-placeholder">🏏<div class="gallery-caption-hint">// PHOTO SLOT 3</div></div>
-      <div class="gallery-hover-label"><span>▶ View Memory</span><div class="gallery-hover-caption">Cricket legends</div></div>
-    </div>
-    <div class="gallery-item" onclick="openModal('🤖','[PHOTO CAPTION] — e.g., First robotics competition')" data-index="3">
-      <div class="gallery-placeholder">🤖<div class="gallery-caption-hint">// PHOTO SLOT 4</div></div>
-      <div class="gallery-hover-label"><span>▶ View Memory</span><div class="gallery-hover-caption">Engineering era</div></div>
-    </div>
-    <div class="gallery-item" onclick="openModal('💻','[PHOTO CAPTION] — e.g., 3am coding session')" data-index="4">
-      <div class="gallery-placeholder">💻<div class="gallery-caption-hint">// PHOTO SLOT 5</div></div>
-      <div class="gallery-hover-label"><span>▶ View Memory</span><div class="gallery-hover-caption">Late night grind</div></div>
-    </div>
-    <div class="gallery-item" onclick="openModal('🎂','[PHOTO CAPTION] — e.g., Happy 22nd! Best birthday ever.')" data-index="5">
-      <div class="gallery-placeholder" style="background:linear-gradient(135deg,#3a0a00,#1a0a00);">🎂<div class="gallery-caption-hint">// PHOTO SLOT 6</div></div>
-      <div class="gallery-hover-label"><span>▶ View Memory</span><div class="gallery-hover-caption">Birthday 22</div></div>
+  <div class="gallery-item" onclick="openModal('images/photo2.jpg','Fun at Canada Wonderland')" data-index="1">
+    <img src="photo2.jpg" alt="Wonderland moments" class="gallery-img">
+    <div class="gallery-hover-label">
+      <span>▶ View Memory</span>
+      <div class="gallery-hover-caption">Wonderland moments</div>
     </div>
   </div>
-</section>
 
-<!-- ===================================
-     STATS DASHBOARD
-=================================== -->
-<section id="stats">
-  <div class="section-header">
-    <div class="section-label">// SYSTEM_PROFILE_v22.0</div>
-    <h2 class="section-title">The <span class="accent">Mohit Bhavsar</span><br>Dashboard</h2>
-    <div class="section-line"></div>
+  <div class="gallery-item" onclick="openModal('images/photo3.jpg','Playing volleyball in the ocean')" data-index="2">
+    <img src="photo3.jpg" alt="Beach Days" class="gallery-img">
+    <div class="gallery-hover-label">
+      <span>▶ View Memory</span>
+      <div class="gallery-hover-caption">Beach Days</div>
+    </div>
   </div>
 
-  <div class="dashboard">
-
-    <!-- SKILL BARS -->
-    <div class="panel">
-      <div class="panel-title">// SKILL_MATRIX</div>
-      <!-- EDIT: Adjust bar widths (in %) to customize skill levels -->
-      <div class="stat-row">
-        <div class="stat-label">💻 Coding</div>
-        <div class="stat-bar-wrap"><div class="stat-bar" data-width="88"></div></div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-label">🏏 Cricket</div>
-        <div class="stat-bar-wrap"><div class="stat-bar neon-blue" data-width="75"></div></div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-label">⚽ Soccer</div>
-        <div class="stat-bar-wrap"><div class="stat-bar neon-green" data-width="70"></div></div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-label">🏎️ F1 Knowledge</div>
-        <div class="stat-bar-wrap"><div class="stat-bar" data-width="95"></div></div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-label">😤 Being Annoying</div>
-        <div class="stat-bar-wrap"><div class="stat-bar neon-pink" data-width="100"></div></div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-label">🤗 Being Amazing</div>
-        <div class="stat-bar-wrap"><div class="stat-bar neon-pink" data-width="100"></div></div>
-      </div>
+  <div class="gallery-item" onclick="openModal('images/photo4.jpg','Childhood Days')" data-index="3">
+    <img src="photo4.jpg" alt="Childhood Days" class="gallery-img">
+    <div class="gallery-hover-label">
+      <span>▶ View Memory</span>
+      <div class="gallery-hover-caption">Childhood Days</div>
     </div>
-
-    <!-- CRICKET SCOREBOARD -->
-    <div class="panel">
-      <div class="panel-title">// LIFE_SCORECARD</div>
-      <div class="scoreboard">
-        <div class="scoreboard-header">MOHIT BHAVSAR // INNINGS 22</div>
-        <!-- EDIT: Customize the scoreboard stats -->
-        <div class="scoreboard-row"><span>Age</span><span class="value">22 not out 🏏</span></div>
-        <div class="scoreboard-row"><span>Fav F1 Team</span><span class="value">McLaren 🏎️</span></div>
-        <div class="scoreboard-row"><span>Commits Today</span><span class="value">∞</span></div>
-        <div class="scoreboard-row"><span>Bugs Created</span><span class="value">classified</span></div>
-        <div class="scoreboard-row"><span>Bugs Fixed</span><span class="value">all of them 💪</span></div>
-        <div class="scoreboard-row"><span>Sleep (hrs)</span><span class="value">optional</span></div>
-        <div class="scoreboard-row"><span>Sibling Rank</span><span class="value">#1 (annoying)</span></div>
-        <div class="scoreboard-row"><span>Sibling Rank</span><span class="value">#1 (amazing)</span></div>
-      </div>
-    </div>
-
-    <!-- BADGES + FACTS -->
-    <div class="panel">
-      <div class="panel-title">// ACHIEVEMENT_UNLOCKED</div>
-      <div class="badge-grid">
-        <!-- EDIT: Add/remove badges -->
-        <span class="badge badge-orange">McLaren Fan</span>
-        <span class="badge badge-blue">Engineer</span>
-        <span class="badge badge-green">Cricket Legend</span>
-        <span class="badge badge-pink">Big Bro ❤️</span>
-        <span class="badge badge-orange">Robot Builder</span>
-        <span class="badge badge-blue">Night Owl</span>
-        <span class="badge badge-green">Soccer Fan</span>
-        <span class="badge badge-orange">22 &amp; Thriving</span>
-        <span class="badge badge-pink">Fan Favourite</span>
-      </div>
-
-      <div style="margin-top:24px;">
-        <!-- EDIT: Random facts about Mohit -->
-        <div class="info-item"><div class="info-icon">⚡</div><div class="info-text"><strong>Random Fact #1</strong>[e.g., Has strong opinions about tyre strategies but also about cricket DRS]</div></div>
-        <div class="info-item"><div class="info-icon">🔧</div><div class="info-text"><strong>Random Fact #2</strong>[e.g., Once fixed a bug by staring at it for 20 minutes — no changes, just vibes]</div></div>
-        <div class="info-item"><div class="info-icon">🎯</div><div class="info-text"><strong>Random Fact #3</strong>[e.g., Secretly the best hype person when you need encouragement]</div></div>
-      </div>
-    </div>
-
   </div>
-</section>
+
+  <div class="gallery-item" onclick="openModal('images/photo5.jpg','Number 1 Annoyer')" data-index="4">
+    <img src="photo5.jpg" alt="Number 1 Annoyer" class="gallery-img">
+    <div class="gallery-hover-label">
+      <span>▶ View Memory</span>
+      <div class="gallery-hover-caption">Number 1 Annoyer</div>
+    </div>
+  </div>
+
+  <div class="gallery-item" onclick="openModal('images/photo6.jpg','Happy 22nd! Best birthday ever')" data-index="5">
+    <img src="photo6.jpg" alt="Forever young" class="gallery-img">
+    <div class="gallery-hover-label">
+      <span>▶ View Memory</span>
+      <div class="gallery-hover-caption">Forever Young!</div>
+    </div>
+  </div>
+
+</div>
 
 <!-- ===================================
      MINI GAMES
@@ -1302,33 +1235,6 @@ nav {
       <button class="btn-game" onclick="f1Race()">🚀 LAUNCH CAR</button>
       <div id="lap-time" style="margin-top:12px;font-family:'Space Mono',monospace;font-size:11px;color:var(--neon-blue);min-height:20px;"></div>
     </div>
-
-    <!-- ROBOT BUILDER -->
-    <div class="game-card">
-      <span class="game-emoji">🤖</span>
-      <h3 class="game-title">Build a Robot</h3>
-      <p class="game-desc">Drag the parts below into the build zone to assemble your own robot. Engineer mode: ON.</p>
-      <div id="robot-game">
-        <div class="robot-parts-row">
-          <div class="robot-part" draggable="true" ondragstart="dragPart(event)" data-part="🦾">🦾</div>
-          <div class="robot-part" draggable="true" ondragstart="dragPart(event)" data-part="🦿">🦿</div>
-          <div class="robot-part" draggable="true" ondragstart="dragPart(event)" data-part="🧠">🧠</div>
-          <div class="robot-part" draggable="true" ondragstart="dragPart(event)" data-part="⚙️">⚙️</div>
-          <div class="robot-part" draggable="true" ondragstart="dragPart(event)" data-part="🔩">🔩</div>
-          <div class="robot-part" draggable="true" ondragstart="dragPart(event)" data-part="💡">💡</div>
-        </div>
-        <div class="robot-display" 
-             id="robot-drop" 
-             ondragover="allowDrop(event)" 
-             ondrop="dropPart(event)"
-             onclick="clearRobot()">
-          <span class="robot-display-hint">[ DROP PARTS HERE // CLICK TO RESET ]</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- ===================================
      FINAL SECTION
@@ -1757,14 +1663,20 @@ function renderRobot() {
 /* ===================================
    GALLERY MODAL
 =================================== */
-function openModal(emoji, caption) {
-  document.getElementById('modal-img').textContent = emoji;
+function openModal(imageSrc, caption) {
+  const modalImg = document.getElementById('modal-img');
+  
+  modalImg.src = imageSrc;              // set image source
+  modalImg.style.display = "block";     // make sure it's visible
+
   document.getElementById('modal-caption').textContent = caption;
   document.getElementById('modal').classList.add('active');
 }
+
 function closeModal() {
   document.getElementById('modal').classList.remove('active');
 }
+
 document.getElementById('modal').addEventListener('click', function(e) {
   if (e.target === this) closeModal();
 });
