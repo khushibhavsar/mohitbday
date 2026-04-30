@@ -6,9 +6,6 @@
 <title>Happy Birthday Mohit! 🎉</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-/* ===================================
-   ROOT VARIABLES & RESET
-=================================== */
 :root {
   --orange: #FF8000;
   --orange-glow: #FF8000aa;
@@ -23,11 +20,8 @@
   --text-muted: #8888aa;
   --circuit-color: #1a2a4a;
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--dark-bg);
   color: var(--text-primary);
@@ -36,10 +30,6 @@ body {
   cursor: none;
   overflow-x: hidden;
 }
-
-/* ===================================
-   CUSTOM CURSOR
-=================================== */
 #cursor {
   position: fixed;
   width: 20px; height: 20px;
@@ -62,7 +52,6 @@ body {
   transition: left 0.12s, top 0.12s, width 0.2s, height 0.2s;
 }
 body:hover #cursor { opacity: 1; }
-
 .sparkle {
   position: fixed;
   width: 6px; height: 6px;
@@ -75,10 +64,6 @@ body:hover #cursor { opacity: 1; }
   0% { opacity: 1; transform: scale(1) translate(-50%, -50%); }
   100% { opacity: 0; transform: scale(0) translate(-50%, -50%); }
 }
-
-/* ===================================
-   CANVAS / CIRCUIT BACKGROUND
-=================================== */
 #circuit-canvas {
   position: fixed;
   top: 0; left: 0;
@@ -86,17 +71,9 @@ body:hover #cursor { opacity: 1; }
   z-index: 0;
   opacity: 0.3;
 }
-
-/* ===================================
-   SCROLLBAR
-=================================== */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--dark-bg); }
 ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 2px; }
-
-/* ===================================
-   SECTION BASE
-=================================== */
 section {
   position: relative;
   z-index: 1;
@@ -106,7 +83,6 @@ section {
   flex-direction: column;
   justify-content: center;
 }
-
 .section-label {
   font-family: 'Space Mono', monospace;
   font-size: 11px;
@@ -116,10 +92,6 @@ section {
   margin-bottom: 16px;
   opacity: 0.8;
 }
-
-/* ===================================
-   NAV
-=================================== */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -152,16 +124,11 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--orange); }
-
-/* ===================================
-   HERO SECTION
-=================================== */
 #hero {
   align-items: center;
   text-align: center;
   overflow: hidden;
 }
-
 .f1-track {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -182,7 +149,6 @@ nav {
   from { left: -100px; }
   to { left: calc(100% + 100px); }
 }
-
 .track-line {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -194,7 +160,6 @@ nav {
   0%, 100% { opacity: 0.5; box-shadow: 0 0 5px var(--orange); }
   50% { opacity: 1; box-shadow: 0 0 20px var(--orange), 0 0 40px var(--orange-glow); }
 }
-
 .hero-eyebrow {
   font-family: 'Space Mono', monospace;
   font-size: 12px;
@@ -205,7 +170,6 @@ nav {
   opacity: 0;
   animation: fade-up 0.8s 0.3s forwards;
 }
-
 .hero-title {
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(3rem, 10vw, 8rem);
@@ -215,7 +179,6 @@ nav {
   opacity: 0;
   animation: fade-up 0.8s 0.6s forwards;
 }
-
 .hero-title .name-highlight {
   display: block;
   background: linear-gradient(135deg, var(--orange), #ffcc00, var(--orange));
@@ -229,7 +192,6 @@ nav {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
-
 .hero-sub {
   font-size: clamp(1rem, 3vw, 1.4rem);
   color: var(--text-muted);
@@ -239,7 +201,6 @@ nav {
   animation: fade-up 0.8s 0.9s forwards;
 }
 .hero-sub span { color: var(--neon-blue); }
-
 .hero-emojis {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   margin-bottom: 32px;
@@ -266,7 +227,6 @@ nav {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
-
 .btn-primary {
   font-family: 'Orbitron', sans-serif;
   font-size: 14px;
@@ -298,19 +258,13 @@ nav {
 .btn-primary:hover { color: #000; }
 .btn-primary:hover::before { transform: scaleX(1); }
 .btn-primary:hover { box-shadow: 0 0 30px var(--orange-glow); }
-
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* ===================================
-   LETTER SECTION
-=================================== */
 #letter {
   background: radial-gradient(ellipse at 20% 50%, #1a0a0022 0%, transparent 60%);
 }
-
 .letter-container {
   max-width: 700px;
   margin: 0 auto;
@@ -330,7 +284,6 @@ nav {
   font-family: serif;
   line-height: 1;
 }
-
 .letter-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
@@ -356,16 +309,11 @@ nav {
   color: var(--text-muted);
 }
 .letter-sign strong { color: var(--orange); }
-
-/* ===================================
-   SURPRISE SECTION
-=================================== */
 #surprise {
   align-items: center;
   text-align: center;
   background: radial-gradient(ellipse at center, #1a0a00 0%, var(--dark-bg) 70%);
 }
-
 .surprise-box {
   background: var(--dark-card);
   border: 2px solid #333;
@@ -386,7 +334,6 @@ nav {
   transition: opacity 0.3s;
 }
 .surprise-box:hover::after { opacity: 1; }
-
 .surprise-icon { font-size: 64px; margin-bottom: 24px; display: block; }
 .surprise-title {
   font-family: 'Orbitron', sans-serif;
@@ -395,7 +342,6 @@ nav {
   color: var(--text-primary);
 }
 .surprise-sub { color: var(--text-muted); margin-bottom: 32px; }
-
 #surprise-reveal {
   display: none;
   margin-top: 32px;
@@ -410,19 +356,13 @@ nav {
   margin-bottom: 12px;
 }
 #surprise-reveal p { color: var(--text-primary); line-height: 1.7; }
-
-/* ===================================
-   GALLERY SECTION
-=================================== */
 #gallery { background: var(--dark-bg); }
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 16px;
   margin-top: 40px;
 }
-
 .gallery-item {
   position: relative;
   aspect-ratio: 4/3;
@@ -430,7 +370,6 @@ nav {
   border: 1px solid #ffffff11;
   overflow: hidden;
   cursor: pointer;
-  group: true;
 }
 .gallery-item::before {
   content: '';
@@ -442,7 +381,6 @@ nav {
   z-index: 1;
 }
 .gallery-item:hover::before { opacity: 1; }
-
 .gallery-placeholder {
   width: 100%;
   height: 100%;
@@ -487,15 +425,12 @@ nav {
   text-align: center;
   padding: 0 16px;
 }
-
-   .gallery-img {
+.gallery-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* THIS makes images crop nicely */
+  object-fit: cover;
   display: block;
 }
-
-/* Modal */
 #modal {
   display: none;
   position: fixed;
@@ -539,21 +474,15 @@ nav {
   transition: all 0.2s;
 }
 #modal-close:hover { color: var(--orange); border-color: var(--orange); }
-
-/* ===================================
-   STATS DASHBOARD
-=================================== */
 #stats {
   background: radial-gradient(ellipse at 80% 50%, #001a1a33 0%, transparent 60%);
 }
-
 .dashboard {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
   margin-top: 40px;
 }
-
 .panel {
   background: var(--dark-panel);
   border: 1px solid #ffffff0a;
@@ -614,7 +543,6 @@ nav {
 .stat-bar.neon-blue { background: linear-gradient(90deg, var(--neon-blue), #0088ff); }
 .stat-bar.neon-green { background: linear-gradient(90deg, var(--neon-green), #00cc00); }
 .stat-bar.neon-pink { background: linear-gradient(90deg, var(--neon-pink), #ff0066); }
-
 .info-item {
   display: flex;
   gap: 12px;
@@ -624,7 +552,6 @@ nav {
 .info-icon { font-size: 20px; flex-shrink: 0; }
 .info-text { font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
 .info-text strong { color: var(--text-primary); display: block; }
-
 .badge-grid {
   display: flex;
   flex-wrap: wrap;
@@ -643,19 +570,13 @@ nav {
 .badge-blue { border-color: var(--neon-blue); color: var(--neon-blue); }
 .badge-green { border-color: var(--neon-green); color: var(--neon-green); }
 .badge-pink { border-color: var(--neon-pink); color: var(--neon-pink); }
-
-/* ===================================
-   MINI GAMES SECTION
-=================================== */
 #games { background: var(--dark-bg); }
-
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
   margin-top: 40px;
 }
-
 .game-card {
   background: var(--dark-card);
   border: 1px solid #ffffff0a;
@@ -666,7 +587,6 @@ nav {
   transition: border-color 0.3s;
 }
 .game-card:hover { border-color: var(--orange); }
-
 .game-emoji { font-size: 56px; display: block; margin-bottom: 16px; }
 .game-title {
   font-family: 'Orbitron', sans-serif;
@@ -674,7 +594,6 @@ nav {
   margin-bottom: 8px;
 }
 .game-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.5; }
-
 .btn-game {
   font-family: 'Space Mono', monospace;
   font-size: 11px;
@@ -692,8 +611,6 @@ nav {
   color: #000;
   box-shadow: 0 0 20px var(--orange-glow);
 }
-
-/* Goal animation */
 #goal-area {
   position: fixed;
   inset: 0;
@@ -719,8 +636,6 @@ nav {
   80% { transform: scale(1); opacity: 1; }
   100% { transform: scale(0.8); opacity: 0; }
 }
-
-/* F1 zooom */
 #f1-zoom-area {
   position: fixed;
   top: 50%;
@@ -738,11 +653,7 @@ nav {
   0% { left: -200px; }
   100% { left: calc(100% + 200px); }
 }
-
-/* Robot builder */
-#robot-game {
-  margin-top: 16px;
-}
+#robot-game { margin-top: 16px; }
 .robot-parts-row {
   display: flex;
   gap: 12px;
@@ -781,10 +692,6 @@ nav {
   color: var(--text-muted);
   letter-spacing: 1px;
 }
-
-/* ===================================
-   FINAL SECTION
-=================================== */
 #final {
   align-items: center;
   text-align: center;
@@ -809,7 +716,6 @@ nav {
   margin-bottom: 48px;
   font-family: 'Space Mono', monospace;
 }
-
 .music-toggle {
   position: fixed;
   bottom: 24px;
@@ -827,6 +733,9 @@ nav {
   justify-content: center;
   transition: all 0.2s;
   box-shadow: 0 0 10px var(--orange-glow);
+  /* Ensure tappable on iOS */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 .music-toggle:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--orange-glow); }
 .music-toggle.playing { animation: music-pulse 1s ease-in-out infinite; }
@@ -834,10 +743,6 @@ nav {
   0%, 100% { box-shadow: 0 0 10px var(--orange-glow); }
   50% { box-shadow: 0 0 30px var(--orange-glow), 0 0 60px var(--orange-glow); }
 }
-
-/* ===================================
-   CONFETTI
-=================================== */
 .confetti-piece {
   position: fixed;
   width: 10px;
@@ -850,10 +755,6 @@ nav {
   0% { opacity: 1; transform: translateY(-100px) rotate(0deg); }
   100% { opacity: 0; transform: translateY(100vh) rotate(720deg); }
 }
-
-/* ===================================
-   EASTER EGG
-=================================== */
 #easter-egg {
   display: none;
   position: fixed;
@@ -870,13 +771,7 @@ nav {
   line-height: 1.6;
 }
 #easter-egg.show { display: block; animation: fade-up 0.3s forwards; }
-
-/* ===================================
-   SECTION HEADERS
-=================================== */
-.section-header {
-  margin-bottom: 40px;
-}
+.section-header { margin-bottom: 40px; }
 .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(1.8rem, 5vw, 3rem);
@@ -891,10 +786,6 @@ nav {
   margin-top: 12px;
   box-shadow: 0 0 10px var(--orange-glow);
 }
-
-/* ===================================
-   SCOREBOARD STYLE (Cricket)
-=================================== */
 .scoreboard {
   background: #0a0a00;
   border: 2px solid #444400;
@@ -921,10 +812,6 @@ nav {
   border-bottom: 1px solid #1a1a00;
 }
 .scoreboard-row .value { color: #ffff44; font-weight: 700; }
-
-/* ===================================
-   TIMELINE
-=================================== */
 .timeline {
   position: relative;
   margin-top: 40px;
@@ -960,16 +847,8 @@ nav {
   letter-spacing: 2px;
   margin-bottom: 4px;
 }
-.timeline-content {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
+.timeline-content { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
 .timeline-content strong { color: var(--text-primary); }
-
-/* ===================================
-   RESPONSIVE
-=================================== */
 @media (max-width: 768px) {
   section { padding: 60px 6vw; }
   .nav-links { display: none; }
@@ -983,42 +862,32 @@ nav {
 </head>
 <body>
 
-<!-- CURSOR -->
 <div id="cursor"></div>
 <div id="cursor-trail"></div>
-
-<!-- CIRCUIT BACKGROUND -->
 <canvas id="circuit-canvas"></canvas>
-
-<!-- CONFETTI CONTAINER - JS will append here -->
 <div id="confetti-container"></div>
 
-<!-- GOAL ANIMATION -->
 <div id="goal-area">
   <div class="goal-text">⚽ GOOOAL! ⚽</div>
   <div style="font-family:'Orbitron',sans-serif;font-size:1.2rem;color:var(--neon-green);text-shadow:0 0 20px var(--neon-green);">MOHIT BHAVSAR SCORES! 🎉</div>
 </div>
 
-<!-- F1 ZOOM ELEMENT -->
 <div id="f1-zoom-area">🏎️</div>
 
-<!-- EASTER EGG -->
 <div id="easter-egg">
   <div>🔐 CODE UNLOCKED</div>
   <div style="margin-top:8px;color:var(--text-muted);">Mohit once debugged code in his sleep. The bugs were afraid of him.</div>
 </div>
 
-<!-- MUSIC TOGGLE -->
+<!-- Music button: uses onclick AND touchend so iOS registers the tap inside a gesture -->
 <button class="music-toggle" id="music-btn" onclick="toggleMusic()" title="Toggle birthday music">🎵</button>
 
-<!-- MODAL -->
 <div id="modal">
   <div id="modal-img-wrap"><img id="modal-img" style="max-width:100%; max-height:100%; object-fit:contain;"></div>
   <div id="modal-caption"></div>
   <button id="modal-close" onclick="closeModal()">[ Close ]</button>
 </div>
 
-<!-- NAVIGATION -->
 <nav>
   <div class="nav-logo">MB // 22</div>
   <ul class="nav-links">
@@ -1030,9 +899,6 @@ nav {
   </ul>
 </nav>
 
-<!-- ===================================
-     HERO SECTION
-=================================== -->
 <section id="hero">
   <div class="hero-eyebrow">// CLASSIFIED: BIRTHDAY PROTOCOL ACTIVATED</div>
   <h1 class="hero-title">
@@ -1040,9 +906,8 @@ nav {
     <span class="name-highlight">BIRTHDAY</span>
     MOHIT
   </h1>
-  <!-- EDIT: Change this subtitle text -->
   <p class="hero-sub">
-    I hope all of your wishes come true, happy <span>22!</span> 
+    I hope all of your wishes come true, happy <span>22!</span>
   </p>
   <div class="hero-emojis">
     <span class="hero-emoji" onclick="emojiClick(this)">⚽</span>
@@ -1054,8 +919,6 @@ nav {
   <button class="btn-primary" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
     ▶ START THE EXPERIENCE
   </button>
-
-  <!-- F1 TRACK ANIMATION -->
   <div class="f1-track">
     <div class="track-line"></div>
     <div class="f1-car">🏎️</div>
@@ -1064,77 +927,32 @@ nav {
   </div>
 </section>
 
-<!-- ===================================
-     LETTER SECTION
-=================================== -->
 <section id="letter">
   <div class="section-header">
     <div class="section-label">// TRANSMISSION_01</div>
     <h2 class="section-title">A <span class="accent">Letter</span> From<br>Your Annoying Sibling</h2>
     <div class="section-line"></div>
   </div>
-
   <div class="letter-container">
     <div class="letter-title">Dear Mohit,</div>
-
-    <!-- EDIT: Customize each line of the letter below -->
-    <p class="letter-line">
-Happy Birthday to my dearest and loving brother ♥️ I truly have never been able to say how indebted I am to you for everything you have done for me. Thank you so much for being there for me when I felt all alone and had no support to lean on.
-</p>
-
-<p class="letter-line">
-I am so sorry for always being so stubborn and not listening to you sometimes. Just know that I am so so grateful for you in my life and would have not wanted any other way.
-</p>
-
-<p class="letter-line">
-You are not only my brother but my best friend, my parent, and of course my very very very annoying sibling.
-</p>
-
-<p class="letter-line">
-Bhai you have spent 4 years of your life without me but I only know life with you in it. Thank you so much for taking such good care of me and giving me so much love.
-</p>
-
-<p class="letter-line">
-I am so thankful to God for giving me such a beautiful brother who takes care of my every need, want, desire, and wish.
-</p>
-
-<p class="letter-line">
-Bhai I hope our bond only grows stronger and that every moment in your life is spent with only joys. May God bless you with everything you desire and keep your heart full of the goodness our parents have instilled in you.
-</p>
-
-<p class="letter-line">
-Just know that I WILL ALWAYS BE BY YOUR SIDE and will ALWAYS try to support every decision you make.
-</p>
-
-<p class="letter-line">
-I will try my best to do anything I can for you and will always root for your success.
-</p>
-
-<p class="letter-line">
-I love you so much and all I pray is for your wellness and prosperity.
-</p>
-
-<p class="letter-line">
-On your special day may you continue to live life with that big smile of yours and continue to make yourself the best version.
-</p>
-
-<p class="letter-line">
-Happy birthday big bro!! 🥰
-</p>
-
+    <p class="letter-line">Happy Birthday to my dearest and loving brother ♥️ I truly have never been able to say how indebted I am to you for everything you have done for me. Thank you so much for being there for me when I felt all alone and had no support to lean on.</p>
+    <p class="letter-line">I am so sorry for always being so stubborn and not listening to you sometimes. Just know that I am so so grateful for you in my life and would have not wanted any other way.</p>
+    <p class="letter-line">You are not only my brother but my best friend, my parent, and of course my very very very annoying sibling.</p>
+    <p class="letter-line">Bhai you have spent 4 years of your life without me but I only know life with you in it. Thank you so much for taking such good care of me and giving me so much love.</p>
+    <p class="letter-line">I am so thankful to God for giving me such a beautiful brother who takes care of my every need, want, desire, and wish.</p>
+    <p class="letter-line">Bhai I hope our bond only grows stronger and that every moment in your life is spent with only joys. May God bless you with everything you desire and keep your heart full of the goodness our parents have instilled in you.</p>
+    <p class="letter-line">Just know that I WILL ALWAYS BE BY YOUR SIDE and will ALWAYS try to support every decision you make.</p>
+    <p class="letter-line">I will try my best to do anything I can for you and will always root for your success.</p>
+    <p class="letter-line">I love you so much and all I pray is for your wellness and prosperity.</p>
+    <p class="letter-line">On your special day may you continue to live life with that big smile of yours and continue to make yourself the best version.</p>
+    <p class="letter-line">Happy birthday big bro!! 🥰</p>
     <div class="letter-sign">
       With all love,<br>
-      <strong>
-        <!-- EDIT: Your name here -->
-        Your favorite (and only) sibling 💛
-      </strong>
+      <strong>Your favorite (and only) sibling 💛</strong>
     </div>
   </div>
 </section>
 
-<!-- ===================================
-     SURPRISE SECTION
-=================================== -->
 <section id="surprise">
   <div class="surprise-box">
     <span class="surprise-icon" id="surprise-icon">🎁</span>
@@ -1145,49 +963,34 @@ Happy birthday big bro!! 🥰
     </button>
     <div id="surprise-reveal">
       <h3>🎉 REVELATION COMPLETE 🎉</h3>
-      <!-- EDIT: Customize the surprise message -->
-      <p>You’re officially getting old! But lucky for you, you’re aging like a kesar mango; getting sweeter, richer, and more orange every year 🧡</p>
-      <br>
+      <p>You're officially getting old! But lucky for you, you're aging like a kesar mango; getting sweeter, richer, and more orange every year 🧡</p>
     </div>
   </div>
 </section>
 
-<!-- ===================================
-     GALLERY SECTION
-=================================== -->
 <div class="gallery-grid" id="gallery-grid">
-
   <div class="gallery-item">
     <img src="photo1.jpg" alt="India days" class="gallery-img">
   </div>
-
   <div class="gallery-item">
     <img src="photo2.jpg" alt="Wonderland moments" class="gallery-img">
   </div>
-
   <div class="gallery-item">
     <img src="photo3.jpg" alt="Beach Days" class="gallery-img">
   </div>
-
   <div class="gallery-item">
     <img src="photo4.jpg" alt="Childhood Days" class="gallery-img">
   </div>
-
   <div class="gallery-item">
     <img src="photo5.jpg" alt="Number 1 Annoyer" class="gallery-img">
   </div>
-
   <div class="gallery-item">
     <img src="photo6.jpg" alt="Forever young" class="gallery-img">
   </div>
-
 </div>
-<!-- ===================================
-     FINAL SECTION
-=================================== -->
+
 <section id="final">
   <div class="section-label">// TRANSMISSION_END</div>
-  <!-- EDIT: Customize the final message -->
   <h2 class="final-msg">
     No matter how old you get,<br>
     you'll always be my annoying but<br>
@@ -1211,7 +1014,7 @@ Happy birthday big bro!! 🥰
 const cursor = document.getElementById('cursor');
 const trail = document.getElementById('cursor-trail');
 let mouseX = 0, mouseY = 0;
-let sparkleColors = ['#FF8000','#00f5ff','#39ff14','#ff00aa','#ffcc00'];
+const sparkleColors = ['#FF8000','#00f5ff','#39ff14','#ff00aa','#ffcc00'];
 
 document.addEventListener('mousemove', e => {
   mouseX = e.clientX; mouseY = e.clientY;
@@ -1219,7 +1022,6 @@ document.addEventListener('mousemove', e => {
   cursor.style.top = mouseY + 'px';
   trail.style.left = mouseX + 'px';
   trail.style.top = mouseY + 'px';
-  // Sparkle
   if (Math.random() < 0.15) {
     const s = document.createElement('div');
     s.className = 'sparkle';
@@ -1231,28 +1033,17 @@ document.addEventListener('mousemove', e => {
     setTimeout(() => s.remove(), 600);
   }
 });
-
-document.addEventListener('mousedown', () => {
-  cursor.style.width = '30px';
-  cursor.style.height = '30px';
-});
-document.addEventListener('mouseup', () => {
-  cursor.style.width = '20px';
-  cursor.style.height = '20px';
-});
+document.addEventListener('mousedown', () => { cursor.style.width = '30px'; cursor.style.height = '30px'; });
+document.addEventListener('mouseup',   () => { cursor.style.width = '20px'; cursor.style.height = '20px'; });
 
 /* ===================================
-   CIRCUIT CANVAS BACKGROUND
+   CIRCUIT CANVAS
 =================================== */
 const canvas = document.getElementById('circuit-canvas');
 const ctx = canvas.getContext('2d');
-let nodes = [];
-let pulses = [];
+let nodes = [], pulses = [];
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
+function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
@@ -1260,136 +1051,212 @@ function initNodes() {
   nodes = [];
   const cols = Math.floor(window.innerWidth / 80);
   const rows = Math.floor(window.innerHeight / 80);
-  for (let i = 0; i <= cols; i++) {
-    for (let j = 0; j <= rows; j++) {
-      if (Math.random() < 0.4) {
-        nodes.push({ x: i * 80 + Math.random()*20 - 10, y: j * 80 + Math.random()*20 - 10 });
-      }
-    }
-  }
+  for (let i = 0; i <= cols; i++)
+    for (let j = 0; j <= rows; j++)
+      if (Math.random() < 0.4)
+        nodes.push({ x: i*80 + Math.random()*20-10, y: j*80 + Math.random()*20-10 });
 }
 initNodes();
 
 function drawCircuit() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = '#1a2a4a';
-  ctx.lineWidth = 1;
-  
-  // Draw connections
+  ctx.strokeStyle = '#1a2a4a'; ctx.lineWidth = 1;
   for (let i = 0; i < nodes.length; i++) {
-    for (let j = i + 1; j < nodes.length; j++) {
-      const dx = nodes[j].x - nodes[i].x;
-      const dy = nodes[j].y - nodes[i].y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
+    for (let j = i+1; j < nodes.length; j++) {
+      const dx = nodes[j].x-nodes[i].x, dy = nodes[j].y-nodes[i].y;
+      const dist = Math.sqrt(dx*dx+dy*dy);
       if (dist < 120) {
-        ctx.beginPath();
-        ctx.moveTo(nodes[i].x, nodes[i].y);
-        // Make circuit-style right-angle paths
-        if (Math.random() < 0.5) {
-          ctx.lineTo(nodes[j].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-        } else {
-          ctx.lineTo(nodes[i].x, nodes[j].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-        }
-        ctx.globalAlpha = 0.3 * (1 - dist/120);
-        ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y);
+        if (Math.random()<0.5) { ctx.lineTo(nodes[j].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); }
+        else { ctx.lineTo(nodes[i].x, nodes[j].y); ctx.lineTo(nodes[j].x, nodes[j].y); }
+        ctx.globalAlpha = 0.3*(1-dist/120); ctx.stroke();
       }
     }
   }
-  
-  // Draw nodes
   ctx.globalAlpha = 0.5;
-  nodes.forEach(n => {
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, 2, 0, Math.PI*2);
-    ctx.fillStyle = '#FF800066';
-    ctx.fill();
-  });
-  
-  // Draw pulses
+  nodes.forEach(n => { ctx.beginPath(); ctx.arc(n.x,n.y,2,0,Math.PI*2); ctx.fillStyle='#FF800066'; ctx.fill(); });
   ctx.globalAlpha = 1;
   pulses = pulses.filter(p => p.life > 0);
   pulses.forEach(p => {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
-    ctx.strokeStyle = p.color;
-    ctx.globalAlpha = p.life;
-    ctx.lineWidth = 1.5;
-    ctx.stroke();
-    p.r += 1.5;
-    p.life -= 0.015;
+    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.strokeStyle=p.color; ctx.globalAlpha=p.life; ctx.lineWidth=1.5; ctx.stroke();
+    p.r+=1.5; p.life-=0.015;
   });
-  
   requestAnimationFrame(drawCircuit);
 }
 drawCircuit();
-
-// Spawn random pulses
 setInterval(() => {
   if (nodes.length > 0) {
     const n = nodes[Math.floor(Math.random()*nodes.length)];
-    pulses.push({ x: n.x, y: n.y, r: 0, life: 0.8, color: Math.random() < 0.7 ? '#FF8000' : '#00f5ff' });
+    pulses.push({ x:n.x, y:n.y, r:0, life:0.8, color: Math.random()<0.7?'#FF8000':'#00f5ff' });
   }
 }, 400);
 
 /* ===================================
-   LETTER ANIMATION (Intersection Observer)
+   LETTER ANIMATION
 =================================== */
 const letterLines = document.querySelectorAll('.letter-line');
 const timelineItems = document.querySelectorAll('.timeline-item');
-
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const el = entry.target;
-      const delay = el.dataset.delay || 0;
-      setTimeout(() => el.classList.add('visible'), delay);
+      setTimeout(() => el.classList.add('visible'), el.dataset.delay || 0);
     }
   });
 }, { threshold: 0.2 });
+letterLines.forEach((l,i) => { l.dataset.delay = i*100; observer.observe(l); });
+timelineItems.forEach((t,i) => { t.dataset.delay = i*150; observer.observe(t); });
 
-letterLines.forEach((line, i) => {
-  line.dataset.delay = i * 100;
-  observer.observe(line);
-});
-
-timelineItems.forEach((item, i) => {
-  item.dataset.delay = i * 150;
-  observer.observe(item);
-});
-
-/* ===================================
-   STAT BARS ANIMATION
-=================================== */
-const barObserver = new IntersectionObserver((entries) => {
+const barObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.stat-bar').forEach(bar => {
-        setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, 200);
-      });
-    }
+    if (entry.isIntersecting)
+      entry.target.querySelectorAll('.stat-bar').forEach(b => setTimeout(() => { b.style.width = b.dataset.width+'%'; }, 200));
   });
 }, { threshold: 0.3 });
 document.querySelectorAll('.panel').forEach(p => barObserver.observe(p));
 
 /* ===================================
-   SURPRISE BUTTON
+   iOS AUDIO UNLOCK
+   iOS Safari requires AudioContext to be created AND resumed
+   synchronously within a user-gesture event. We do this on
+   the very first touch anywhere on the page, before the user
+   even taps the music button, so it's ready to go immediately.
+=================================== */
+const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+let audioCtx = null;
+
+function getAudio() {
+  // Create context if it doesn't exist yet
+  if (!audioCtx) audioCtx = new AudioCtxClass();
+  // iOS suspends the context even after creation — resume() inside a gesture fixes it
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  return audioCtx;
+}
+
+function iosUnlock() {
+  // Create + resume the context on first touch
+  if (!audioCtx) audioCtx = new AudioCtxClass();
+  audioCtx.resume().then(() => {
+    // Play a 1-frame silent buffer — older iOS versions need this to fully unlock
+    try {
+      const buf = audioCtx.createBuffer(1, 1, 22050);
+      const src = audioCtx.createBufferSource();
+      src.buffer = buf;
+      src.connect(audioCtx.destination);
+      src.start(0);
+    } catch(e) {}
+  });
+}
+// Use { once: true } so the listener auto-removes after first fire
+document.addEventListener('touchstart', iosUnlock, { once: true, passive: true });
+document.addEventListener('click',      iosUnlock, { once: true });
+
+/* ===================================
+   SOUND EFFECTS
+=================================== */
+function playBirthdaySound() {
+  try {
+    const ac = getAudio();
+    const notes =     [523,523,587,523,698,659, 523,523,587,523,784,698];
+    const durations = [0.2,0.2,0.4,0.4,0.4,0.8, 0.2,0.2,0.4,0.4,0.4,0.8];
+    let t = ac.currentTime;
+    notes.forEach((freq, i) => {
+      const osc = ac.createOscillator(), gain = ac.createGain();
+      osc.connect(gain); gain.connect(ac.destination);
+      osc.frequency.value = freq; osc.type = 'sine';
+      gain.gain.setValueAtTime(0.3, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + durations[i]);
+      osc.start(t); osc.stop(t + durations[i]);
+      t += durations[i];
+    });
+  } catch(e) {}
+}
+
+function playGoalSound() {
+  try {
+    const ac = getAudio();
+    const osc = ac.createOscillator(), gain = ac.createGain();
+    osc.connect(gain); gain.connect(ac.destination);
+    osc.frequency.setValueAtTime(200, ac.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(800, ac.currentTime + 0.3);
+    osc.type = 'square';
+    gain.gain.setValueAtTime(0.3, ac.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.5);
+    osc.start(); osc.stop(ac.currentTime + 0.5);
+  } catch(e) {}
+}
+
+function playZoomSound() {
+  try {
+    const ac = getAudio();
+    const osc = ac.createOscillator(), gain = ac.createGain();
+    osc.connect(gain); gain.connect(ac.destination);
+    osc.frequency.setValueAtTime(800, ac.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(100, ac.currentTime + 1.5);
+    osc.type = 'sawtooth';
+    gain.gain.setValueAtTime(0.2, ac.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 1.5);
+    osc.start(); osc.stop(ac.currentTime + 1.5);
+  } catch(e) {}
+}
+
+/* ===================================
+   MUSIC TOGGLE
+   The key iOS fix: toggleMusic() is called directly by onclick,
+   which IS a user gesture, so getAudio() → resume() works here.
+=================================== */
+let musicPlaying = false;
+let musicInterval = null;
+const BIRTHDAY_MELODY = [523,523,587,523,698,659,0,523,523,587,523,784,698,0];
+
+function toggleMusic() {
+  const btn = document.getElementById('music-btn');
+  if (musicPlaying) {
+    musicPlaying = false;
+    btn.textContent = '🎵';
+    btn.classList.remove('playing');
+    clearInterval(musicInterval);
+  } else {
+    // getAudio() calls resume() right here inside the click handler — iOS allows it
+    const ac = getAudio();
+    musicPlaying = true;
+    btn.textContent = '🔊';
+    btn.classList.add('playing');
+    let idx = 0;
+    function playNote() {
+      if (!musicPlaying) return;
+      try {
+        const freq = BIRTHDAY_MELODY[idx % BIRTHDAY_MELODY.length];
+        if (freq > 0) {
+          const osc = ac.createOscillator(), gain = ac.createGain();
+          osc.connect(gain); gain.connect(ac.destination);
+          osc.frequency.value = freq; osc.type = 'sine';
+          gain.gain.setValueAtTime(0.15, ac.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.35);
+          osc.start(); osc.stop(ac.currentTime + 0.35);
+        }
+        idx++;
+      } catch(e) {}
+    }
+    playNote(); // play first note immediately so there's no gap
+    musicInterval = setInterval(playNote, 400);
+  }
+}
+
+/* ===================================
+   SURPRISE
 =================================== */
 let surpriseDone = false;
 function triggerSurprise() {
   if (surpriseDone) return;
   surpriseDone = true;
-  
   const btn = document.getElementById('surprise-btn');
   btn.textContent = '🎉 UNLOCKED!';
   btn.style.background = 'var(--orange)';
   btn.style.color = '#000';
-  
   document.getElementById('surprise-icon').textContent = '🎊';
   document.getElementById('surprise-reveal').style.display = 'block';
-  document.getElementById('surprise-reveal').style.animation = 'fade-up 0.5s forwards';
-  
   spawnConfetti(150);
   playBirthdaySound();
 }
@@ -1428,121 +1295,16 @@ function spawnConfetti(count = 100) {
 }
 
 /* ===================================
-   SOUND EFFECTS (Web Audio API)
-=================================== */
-const AudioCtx = window.AudioContext || window.webkitAudioContext;
-let audioCtx = null;
-
-function getAudio() {
-  if (!audioCtx) audioCtx = new AudioCtx();
-  return audioCtx;
-}
-
-function playBirthdaySound() {
-  try {
-    const ac = getAudio();
-    // Play a little melody
-    const notes = [523, 523, 587, 523, 698, 659, 523, 523, 587, 523, 784, 698];
-    const durations = [0.2,0.2,0.4,0.4,0.4,0.8, 0.2,0.2,0.4,0.4,0.4,0.8];
-    let time = ac.currentTime;
-    notes.forEach((freq, i) => {
-      const osc = ac.createOscillator();
-      const gain = ac.createGain();
-      osc.connect(gain); gain.connect(ac.destination);
-      osc.frequency.value = freq;
-      osc.type = 'sine';
-      gain.gain.setValueAtTime(0.3, time);
-      gain.gain.exponentialRampToValueAtTime(0.001, time + durations[i]);
-      osc.start(time);
-      osc.stop(time + durations[i]);
-      time += durations[i];
-    });
-  } catch(e) {}
-}
-
-function playGoalSound() {
-  try {
-    const ac = getAudio();
-    const osc = ac.createOscillator();
-    const gain = ac.createGain();
-    osc.connect(gain); gain.connect(ac.destination);
-    osc.frequency.setValueAtTime(200, ac.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(800, ac.currentTime + 0.3);
-    osc.type = 'square';
-    gain.gain.setValueAtTime(0.3, ac.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.5);
-    osc.start(); osc.stop(ac.currentTime + 0.5);
-  } catch(e) {}
-}
-
-function playZoomSound() {
-  try {
-    const ac = getAudio();
-    const osc = ac.createOscillator();
-    const gain = ac.createGain();
-    osc.connect(gain); gain.connect(ac.destination);
-    osc.frequency.setValueAtTime(800, ac.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(100, ac.currentTime + 1.5);
-    osc.type = 'sawtooth';
-    gain.gain.setValueAtTime(0.2, ac.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 1.5);
-    osc.start(); osc.stop(ac.currentTime + 1.5);
-  } catch(e) {}
-}
-
-/* ===================================
-   MUSIC TOGGLE
-=================================== */
-let musicPlaying = false;
-let musicOsc = null;
-let musicInterval = null;
-const BIRTHDAY_MELODY = [523,523,587,523,698,659,0,523,523,587,523,784,698,0];
-
-function toggleMusic() {
-  const btn = document.getElementById('music-btn');
-  if (musicPlaying) {
-    musicPlaying = false;
-    btn.textContent = '🎵';
-    btn.classList.remove('playing');
-    clearInterval(musicInterval);
-  } else {
-    musicPlaying = true;
-    btn.textContent = '🔊';
-    btn.classList.add('playing');
-    let idx = 0;
-    function playNote() {
-      if (!musicPlaying) return;
-      try {
-        const ac = getAudio();
-        const freq = BIRTHDAY_MELODY[idx % BIRTHDAY_MELODY.length];
-        if (freq > 0) {
-          const osc = ac.createOscillator();
-          const gain = ac.createGain();
-          osc.connect(gain); gain.connect(ac.destination);
-          osc.frequency.value = freq;
-          osc.type = 'sine';
-          gain.gain.setValueAtTime(0.15, ac.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.35);
-          osc.start(); osc.stop(ac.currentTime + 0.35);
-        }
-        idx++;
-      } catch(e) {}
-    }
-    musicInterval = setInterval(playNote, 400);
-  }
-}
-
-/* ===================================
    MINI GAMES
 =================================== */
-// Soccer
 function scoreGoal() {
   const ball = document.getElementById('soccer-ball');
-  ball.style.animation = 'none';
-  ball.style.transform = 'translateX(200px) rotate(720deg)';
-  ball.style.transition = 'transform 0.8s cubic-bezier(0.19,1,0.22,1)';
-  setTimeout(() => { ball.style.transform = ''; ball.style.transition = ''; }, 900);
-  
+  if (ball) {
+    ball.style.animation = 'none';
+    ball.style.transform = 'translateX(200px) rotate(720deg)';
+    ball.style.transition = 'transform 0.8s cubic-bezier(0.19,1,0.22,1)';
+    setTimeout(() => { ball.style.transform=''; ball.style.transition=''; }, 900);
+  }
   const ga = document.getElementById('goal-area');
   ga.classList.add('active');
   playGoalSound();
@@ -1550,60 +1312,33 @@ function scoreGoal() {
   setTimeout(() => ga.classList.remove('active'), 2500);
 }
 
-// F1 Race
 function f1Race() {
   const car = document.getElementById('f1-zoom-area');
   if (car.classList.contains('zooming')) return;
-  
-  car.style.animation = 'none';
-  car.offsetHeight; // reflow
+  car.style.animation = 'none'; car.offsetHeight;
   car.classList.add('zooming');
   playZoomSound();
-  
-  // Generate a lap time
-  const mins = 1;
   const secs = (18 + Math.random()*3).toFixed(3);
   setTimeout(() => {
-    document.getElementById('lap-time').textContent = `🟢 P1 | ${mins}:${secs} | POLE POSITION!`;
+    const el = document.getElementById('lap-time');
+    if (el) el.textContent = '🟢 P1 | 1:' + secs + ' | POLE POSITION!';
     car.classList.remove('zooming');
   }, 1600);
 }
 
-// Robot Builder
-let robotParts = [];
-let dragging = null;
-
-function dragPart(e) {
-  dragging = e.target.dataset.part;
-}
-function allowDrop(e) {
-  e.preventDefault();
-  document.getElementById('robot-drop').classList.add('drag-over');
-}
+let robotParts = [], dragging = null;
+function dragPart(e) { dragging = e.target.dataset.part; }
+function allowDrop(e) { e.preventDefault(); document.getElementById('robot-drop').classList.add('drag-over'); }
 function dropPart(e) {
-  e.preventDefault();
-  document.getElementById('robot-drop').classList.remove('drag-over');
-  if (dragging) {
-    robotParts.push(dragging);
-    renderRobot();
-    dragging = null;
-  }
+  e.preventDefault(); document.getElementById('robot-drop').classList.remove('drag-over');
+  if (dragging) { robotParts.push(dragging); renderRobot(); dragging = null; }
 }
-function clearRobot() {
-  if (robotParts.length === 0) return;
-  robotParts = [];
-  renderRobot();
-}
+function clearRobot() { if (!robotParts.length) return; robotParts = []; renderRobot(); }
 function renderRobot() {
   const d = document.getElementById('robot-drop');
-  if (robotParts.length === 0) {
-    d.innerHTML = '<span class="robot-display-hint">[ DROP PARTS HERE // CLICK TO RESET ]</span>';
-  } else {
-    d.innerHTML = robotParts.join(' ');
-    if (robotParts.length >= 4) {
-      d.innerHTML += ' <span style="font-size:16px;color:var(--neon-green)">// ROBOT ONLINE ✓</span>';
-    }
-  }
+  d.innerHTML = robotParts.length === 0
+    ? '<span class="robot-display-hint">[ DROP PARTS HERE // CLICK TO RESET ]</span>'
+    : robotParts.join(' ') + (robotParts.length >= 4 ? ' <span style="font-size:16px;color:var(--neon-green)">// ROBOT ONLINE ✓</span>' : '');
 }
 
 /* ===================================
@@ -1611,68 +1346,33 @@ function renderRobot() {
 =================================== */
 function openModal(imageSrc, caption) {
   const modalImg = document.getElementById('modal-img');
-  
-  modalImg.src = imageSrc;              // set image source
-  modalImg.style.display = "block";     // make sure it's visible
-
+  modalImg.src = imageSrc;
+  modalImg.style.display = 'block';
   document.getElementById('modal-caption').textContent = caption;
   document.getElementById('modal').classList.add('active');
 }
-
-function closeModal() {
-  document.getElementById('modal').classList.remove('active');
-}
-
-document.getElementById('modal').addEventListener('click', function(e) {
-  if (e.target === this) closeModal();
-});
+function closeModal() { document.getElementById('modal').classList.remove('active'); }
+document.getElementById('modal').addEventListener('click', function(e) { if (e.target===this) closeModal(); });
 
 /* ===================================
-   EMOJI CLICK EFFECT
+   MISC
 =================================== */
 function emojiClick(el) {
   el.style.transition = 'transform 0.1s';
   el.style.transform = 'scale(2) rotate(20deg)';
   setTimeout(() => { el.style.transform = ''; }, 300);
 }
-
-/* ===================================
-   REPLAY
-=================================== */
-function replayExperience() {
-  spawnConfetti(50);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-/* ===================================
-   EASTER EGG — Hidden egg emoji + Konami code
-=================================== */
-function showEasterEgg() {
-  const ee = document.getElementById('easter-egg');
-  ee.classList.toggle('show');
-}
+function replayExperience() { spawnConfetti(50); window.scrollTo({ top:0, behavior:'smooth' }); }
+function showEasterEgg() { document.getElementById('easter-egg').classList.toggle('show'); }
 
 const konamiCode = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
 let konamiIdx = 0;
 document.addEventListener('keydown', e => {
-  if (e.key === konamiCode[konamiIdx]) {
-    konamiIdx++;
-    if (konamiIdx === konamiCode.length) {
-      showEasterEgg();
-      spawnConfetti(100);
-      konamiIdx = 0;
-    }
-  } else {
-    konamiIdx = 0;
-  }
+  if (e.key === konamiCode[konamiIdx]) { konamiIdx++; if (konamiIdx === konamiCode.length) { showEasterEgg(); spawnConfetti(100); konamiIdx=0; } }
+  else konamiIdx = 0;
 });
 
-/* ===================================
-   INIT STAT BARS
-=================================== */
-document.querySelectorAll('.stat-bar').forEach(bar => {
-  bar.style.width = '0%';
-});
+document.querySelectorAll('.stat-bar').forEach(b => { b.style.width = '0%'; });
 </script>
 </body>
 </html>
